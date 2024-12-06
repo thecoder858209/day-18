@@ -1,0 +1,66 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(49, 49, 49);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .main {
+        background-color: bisque;
+        height: 70%;
+        width: 80%;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .main .box {
+        border-radius: 20px;
+        width: 30%;
+        height: 35%;
+        background-color: black;
+      }
+      audio {
+        position: fixed;
+        bottom: 40px;
+      }
+      video{
+        object-fit: cover;
+      }
+      @media screen and (max-width: 768px) {
+        .main .box {
+          width: 45%; /* Adjust the width to fit two videos per row */
+          height: 25%;
+          object-fit: cover;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <video class="box" src="video.mp4" muted loop autoplay></video>
+      <video class="box" src="video.mp4" muted loop autoplay></video>
+      <video class="box" src="video.mp4" muted loop autoplay></video>
+      <video class="box" src="video.mp4" muted loop autoplay></video>
+      <video class="box" src="video.mp4" muted loop autoplay></video>
+      <video class="box" src="video.mp4" muted loop autoplay></video>
+    </div>
+    <audio controls>
+      <source src="song.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </body>
+</html>
